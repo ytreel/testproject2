@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.zengdongliang.cn/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>OpenShift &#8211; 曾栋梁</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="曾栋梁 &raquo; Feed" href="https://www.zengdongliang.cn/feed/" />
+<link rel="alternate" type="application/rss+xml" title="曾栋梁 &raquo; 评论Feed" href="https://www.zengdongliang.cn/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="曾栋梁 &raquo; OpenShift分类目录Feed" href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.zengdongliang.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.zengdongliang.cn/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://www.zengdongliang.cn/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='appzcoder-mh-styles-css'  href='https://www.zengdongliang.cn/wp-content/plugins/markdown-highlighter/assets/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='https://www.zengdongliang.cn/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=1509' type='text/css' media='all' />
+<style id='md-style-inline-css' type='text/css'>
+ .gfm-task-list { border: 1px solid transparent; list-style-type: none; } .gfm-task-list input { margin-right: 10px !important; } .katex-container { margin: 25px !important; text-align: center; } .katex-container.katex-inline { display: inline-block !important; background: none !important; margin: 0 !important; padding: 0 !important; } pre .katex-container { font-size: 1.4em !important; } .copy-button { cursor: pointer; border: 0; font-size: 12px; text-transform: uppercase; font-weight: 500; padding: 3px 6px 3px 6px; background-color: rgba(255, 255, 255, 0.6); position: absolute; overflow: hidden; top: 5px; right: 5px; border-radius: 3px; } .copy-button:before { content: ""; display: inline-block; width: 16px; height: 16px; margin-right: 3px; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' x=\'0px\' y=\'0px\' width=\'16px\' height=\'16px\' viewBox=\'888 888 16 16\' enable-background=\'new 888 888 16 16\' xml:space=\'preserve\'%3E %3Cpath fill=\'%23333333\' d=\'M903.143,891.429c0.238,0,0.44,0.083,0.607,0.25c0.167,0.167,0.25,0.369,0.25,0.607v10.857 c0,0.238-0.083,0.44-0.25,0.607s-0.369,0.25-0.607,0.25h-8.571c-0.238,0-0.44-0.083-0.607-0.25s-0.25-0.369-0.25-0.607v-2.571 h-4.857c-0.238,0-0.44-0.083-0.607-0.25s-0.25-0.369-0.25-0.607v-6c0-0.238,0.06-0.5,0.179-0.786s0.262-0.512,0.428-0.679 l3.643-3.643c0.167-0.167,0.393-0.309,0.679-0.428s0.547-0.179,0.786-0.179h3.714c0.238,0,0.44,0.083,0.607,0.25 c0.166,0.167,0.25,0.369,0.25,0.607v2.929c0.404-0.238,0.785-0.357,1.143-0.357H903.143z M898.286,893.331l-2.67,2.669h2.67V893.331 z M892.571,889.902l-2.669,2.669h2.669V889.902z M894.321,895.679l2.821-2.822v-3.714h-3.428v3.714c0,0.238-0.083,0.441-0.25,0.607 s-0.369,0.25-0.607,0.25h-3.714v5.714h4.571v-2.286c0-0.238,0.06-0.5,0.179-0.786C894.012,896.071,894.155,895.845,894.321,895.679z M902.857,902.857v-10.286h-3.429v3.714c0,0.238-0.083,0.441-0.25,0.607c-0.167,0.167-0.369,0.25-0.607,0.25h-3.714v5.715H902.857z\' /%3E %3C/svg%3E"); background-repeat: no-repeat; position: relative; top: 3px; } pre { position: relative; } pre:hover .copy-button { background-color: rgba(255, 255, 255, 0.9); } 
+</style>
+<link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/genericons/genericons.css?ver=3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css'  href='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-block-style-css'  href='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.zengdongliang.cn/wp-content/plugins/tablepress/css/default.min.css?ver=1.9.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-content/plugins/markdown-highlighter/assets/highlight.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.zengdongliang.cn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.zengdongliang.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.zengdongliang.cn/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.2" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="archive category category-openshift category-113 wp-custom-logo wp-embed-responsive">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">跳至内容</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<a href="https://www.zengdongliang.cn/" class="custom-logo-link" rel="home"><img width="248" height="248" src="https://www.zengdongliang.cn/wp-content/uploads/2017/12/cropped-111.jpg" class="custom-logo" alt="曾栋梁" srcset="https://www.zengdongliang.cn/wp-content/uploads/2017/12/cropped-111.jpg 248w, https://www.zengdongliang.cn/wp-content/uploads/2017/12/cropped-111-150x150.jpg 150w" sizes="(max-width: 248px) 100vw, 248px" /></a>						<p class="site-title"><a href="https://www.zengdongliang.cn/" rel="home">曾栋梁</a></p>
+												<p class="site-description">https://github.com/HerryZeng</p>
+										<button class="secondary-toggle">菜单和挂件</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2019年七月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期日">日</th>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://www.zengdongliang.cn/2019/06/">&laquo; 6月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td><a href="https://www.zengdongliang.cn/2019/07/09/" aria-label="于2019年7月9日上发布的文章">9</a></td><td>10</td><td id="today">11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.zengdongliang.cn/">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索&hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="搜索" />
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://www.zengdongliang.cn/2019/07/09/mysql%e7%9f%a5%e8%af%86%e7%82%b93/">MySQL知识点3</a>
+									</li>
+											<li>
+					<a href="https://www.zengdongliang.cn/2019/07/09/mysql%e7%9f%a5%e8%af%86%e7%82%b92/">MySQL知识点2</a>
+									</li>
+											<li>
+					<a href="https://www.zengdongliang.cn/2019/07/09/mysql%e7%9f%a5%e8%af%86%e7%82%b91/">MySQL知识点1</a>
+									</li>
+											<li>
+					<a href="https://www.zengdongliang.cn/2019/06/09/kubernetes%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5%e4%b9%8bservice/">Kubernetes基本概念之Service</a>
+									</li>
+											<li>
+					<a href="https://www.zengdongliang.cn/2019/05/29/kubernetes%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5%e4%b9%8bstatefulset/">Kubernetes基本概念之StatefulSet</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">近期评论</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Herry</span>发表在《<a href="https://www.zengdongliang.cn/2019/01/06/%e7%90%86%e8%a7%a3cpu%e4%b8%8a%e4%b8%8b%e6%96%87%e5%88%87%e6%8d%a2%ef%bc%881%ef%bc%89/#comment-749">理解CPU上下文切换（1）</a>》</li></ul></aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">文章归档</h2>		<ul>
+				<li><a href='https://www.zengdongliang.cn/2019/07/'>2019年七月</a>&nbsp;(3)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/06/'>2019年六月</a>&nbsp;(1)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/05/'>2019年五月</a>&nbsp;(19)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/04/'>2019年四月</a>&nbsp;(1)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/03/'>2019年三月</a>&nbsp;(21)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/02/'>2019年二月</a>&nbsp;(1)</li>
+	<li><a href='https://www.zengdongliang.cn/2019/01/'>2019年一月</a>&nbsp;(6)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/10/'>2018年十月</a>&nbsp;(2)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/09/'>2018年九月</a>&nbsp;(3)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/08/'>2018年八月</a>&nbsp;(87)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/07/'>2018年七月</a>&nbsp;(43)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/06/'>2018年六月</a>&nbsp;(39)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/05/'>2018年五月</a>&nbsp;(39)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/04/'>2018年四月</a>&nbsp;(45)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/03/'>2018年三月</a>&nbsp;(43)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/02/'>2018年二月</a>&nbsp;(19)</li>
+	<li><a href='https://www.zengdongliang.cn/2018/01/'>2018年一月</a>&nbsp;(84)</li>
+	<li><a href='https://www.zengdongliang.cn/2017/12/'>2017年十二月</a>&nbsp;(38)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">分类目录</h2>		<ul>
+				<li class="cat-item cat-item-77"><a href="https://www.zengdongliang.cn/category/django/">Django</a> (41)
+<ul class='children'>
+	<li class="cat-item cat-item-78"><a href="https://www.zengdongliang.cn/category/django/%e5%9f%ba%e7%a1%80-django/">基础</a> (27)
+</li>
+	<li class="cat-item cat-item-87"><a href="https://www.zengdongliang.cn/category/django/%e8%bf%9b%e9%98%b6/">进阶</a> (14)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://www.zengdongliang.cn/category/linux/" title="Linux">Linux</a> (30)
+<ul class='children'>
+	<li class="cat-item cat-item-133"><a href="https://www.zengdongliang.cn/category/linux/linux%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96/">Linux性能优化</a> (17)
+</li>
+	<li class="cat-item cat-item-22"><a href="https://www.zengdongliang.cn/category/linux/linux%e8%bf%90%e7%bb%b4/">Linux运维</a> (13)
+	<ul class='children'>
+	<li class="cat-item cat-item-121"><a href="https://www.zengdongliang.cn/category/linux/linux%e8%bf%90%e7%bb%b4/iptables/">IPTABLES</a> (1)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-139"><a href="https://www.zengdongliang.cn/category/maven/">Maven</a> (13)
+</li>
+	<li class="cat-item cat-item-11"><a href="https://www.zengdongliang.cn/category/web/" title="WEB">WEB</a> (4)
+<ul class='children'>
+	<li class="cat-item cat-item-114"><a href="https://www.zengdongliang.cn/category/web/jetty/">Jetty</a> (3)
+</li>
+	<li class="cat-item cat-item-29"><a href="https://www.zengdongliang.cn/category/web/nginx/">Nginx</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://www.zengdongliang.cn/category/%e4%b8%ad%e9%97%b4%e4%bb%b6/">中间件</a> (8)
+<ul class='children'>
+	<li class="cat-item cat-item-47"><a href="https://www.zengdongliang.cn/category/%e4%b8%ad%e9%97%b4%e4%bb%b6/zookeeper/">Zookeeper</a> (8)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-6 current-cat-parent current-cat-ancestor"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/" title="云平台">云平台</a> (54)
+<ul class='children'>
+	<li class="cat-item cat-item-20"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/kubernetes/">Kubernetes</a> (8)
+</li>
+	<li class="cat-item cat-item-113 current-cat"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/">OpenShift</a> (31)
+</li>
+	<li class="cat-item cat-item-17"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openstack/">OpenStack</a> (15)
+	<ul class='children'>
+	<li class="cat-item cat-item-123"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openstack/glance/">Glance</a> (4)
+</li>
+	<li class="cat-item cat-item-122"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openstack/keystone/">Keystone</a> (1)
+</li>
+	<li class="cat-item cat-item-120"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openstack/neutron/">Neutron</a> (8)
+</li>
+	<li class="cat-item cat-item-124"><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openstack/nova/">Nova</a> (1)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-127"><a href="https://www.zengdongliang.cn/category/%e5%89%8d%e7%ab%af/">前端</a> (3)
+<ul class='children'>
+	<li class="cat-item cat-item-128"><a href="https://www.zengdongliang.cn/category/%e5%89%8d%e7%ab%af/html/">HTML</a> (1)
+</li>
+	<li class="cat-item cat-item-130"><a href="https://www.zengdongliang.cn/category/%e5%89%8d%e7%ab%af/javascript/">JavaScript</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-135"><a href="https://www.zengdongliang.cn/category/%e5%bc%80%e5%8f%91%e8%af%ad%e8%a8%80/">开发语言</a> (3)
+<ul class='children'>
+	<li class="cat-item cat-item-136"><a href="https://www.zengdongliang.cn/category/%e5%bc%80%e5%8f%91%e8%af%ad%e8%a8%80/java/">Java</a> (3)
+	<ul class='children'>
+	<li class="cat-item cat-item-137"><a href="https://www.zengdongliang.cn/category/%e5%bc%80%e5%8f%91%e8%af%ad%e8%a8%80/java/%e5%bc%80%e5%8f%91%e6%a1%86%e6%9e%b6/">开发框架</a> (3)
+		<ul class='children'>
+	<li class="cat-item cat-item-138"><a href="https://www.zengdongliang.cn/category/%e5%bc%80%e5%8f%91%e8%af%ad%e8%a8%80/java/%e5%bc%80%e5%8f%91%e6%a1%86%e6%9e%b6/spring-cloud/">Spring Cloud</a> (3)
+</li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/" title="数据库">数据库</a> (105)
+<ul class='children'>
+	<li class="cat-item cat-item-28"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/mysql/">MySQL</a> (58)
+	<ul class='children'>
+	<li class="cat-item cat-item-55"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/mysql/%e5%9f%ba%e7%a1%80/">基础</a> (23)
+</li>
+	<li class="cat-item cat-item-52"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/mysql/%e6%80%a7%e8%83%bd%e8%b0%83%e4%bc%98/" title="性能调优">性能调优</a> (22)
+</li>
+	<li class="cat-item cat-item-70"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/mysql/%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1/">架构设计</a> (11)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/">Oracle Database</a> (47)
+	<ul class='children'>
+	<li class="cat-item cat-item-105"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/dg/">DG</a> (10)
+</li>
+	<li class="cat-item cat-item-104"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/rac/">RAC</a> (1)
+</li>
+	<li class="cat-item cat-item-112"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/rman/">RMAN</a> (15)
+</li>
+	<li class="cat-item cat-item-110"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/sqlplus/">SQLPlus</a> (1)
+</li>
+	<li class="cat-item cat-item-111"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/%e5%9f%ba%e7%a1%80-oracle-database/">基础</a> (19)
+</li>
+	<li class="cat-item cat-item-109"><a href="https://www.zengdongliang.cn/category/%e6%95%b0%e6%8d%ae%e5%ba%93/oracle-database/%e5%ad%98%e5%82%a8%e8%bf%87%e7%a8%8b/">存储过程</a> (2)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-101"><a href="https://www.zengdongliang.cn/category/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6/">版本控制</a> (7)
+<ul class='children'>
+	<li class="cat-item cat-item-134"><a href="https://www.zengdongliang.cn/category/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6/git/">GIT</a> (3)
+</li>
+	<li class="cat-item cat-item-102"><a href="https://www.zengdongliang.cn/category/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6/gitlab/">GitLab</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://www.zengdongliang.cn/category/%e7%bc%93%e5%ad%98/">缓存</a> (17)
+<ul class='children'>
+	<li class="cat-item cat-item-42"><a href="https://www.zengdongliang.cn/category/%e7%bc%93%e5%ad%98/redis/">Redis</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-107"><a href="https://www.zengdongliang.cn/category/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95/">自动化测试</a> (2)
+<ul class='children'>
+	<li class="cat-item cat-item-108"><a href="https://www.zengdongliang.cn/category/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95/selenium/">Selenium</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-90"><a href="https://www.zengdongliang.cn/category/%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f/">设计模式</a> (19)
+</li>
+	<li class="cat-item cat-item-34"><a href="https://www.zengdongliang.cn/category/%e8%b4%9f%e8%bd%bd/" title="负载">负载</a> (1)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/" title="运维自动化">运维自动化</a> (187)
+<ul class='children'>
+	<li class="cat-item cat-item-39"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/ansible/">Ansible</a> (18)
+</li>
+	<li class="cat-item cat-item-37"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/">Python</a> (166)
+	<ul class='children'>
+	<li class="cat-item cat-item-96"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/beautifulsoup4/">BeautifulSoup4</a> (1)
+</li>
+	<li class="cat-item cat-item-125"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/ipython/">IPython</a> (6)
+</li>
+	<li class="cat-item cat-item-99"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/logging/">Logging</a> (1)
+</li>
+	<li class="cat-item cat-item-116"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/matplotlib/">Matplotlib</a> (13)
+</li>
+	<li class="cat-item cat-item-94"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/numpy/">NumPy</a> (31)
+</li>
+	<li class="cat-item cat-item-119"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/pandas/">Pandas</a> (73)
+</li>
+	<li class="cat-item cat-item-81"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/python2%e4%b8%8epython3%e7%9a%84%e4%b8%8d%e5%90%8c%e4%b9%8b%e5%a4%84/">Python3与Python2的不同之处</a> (7)
+</li>
+	<li class="cat-item cat-item-79"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/%e5%9f%ba%e7%a1%80-python/">基础</a> (26)
+</li>
+	<li class="cat-item cat-item-92"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/%e6%80%a7%e8%83%bd%e5%88%86%e6%9e%90%e4%b8%8e%e4%bc%98%e5%8c%96/">性能分析与优化</a> (1)
+</li>
+	<li class="cat-item cat-item-95"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/%e8%a7%86%e8%a7%89%e7%bc%96%e7%a8%8b/">视觉编程</a> (1)
+</li>
+	<li class="cat-item cat-item-106"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/%e8%bf%9b%e9%98%b6-python/">进阶</a> (1)
+</li>
+	<li class="cat-item cat-item-126"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/python/%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e9%ab%98%e7%ba%a7%e7%bc%96%e7%a8%8b/">面向对象高级编程</a> (5)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/shell/">Shell</a> (3)
+	<ul class='children'>
+	<li class="cat-item cat-item-115"><a href="https://www.zengdongliang.cn/category/%e8%bf%90%e7%bb%b4%e8%87%aa%e5%8a%a8%e5%8c%96/shell/sed/">Sed</a> (3)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h2 class="widget-title">功能</h2>			<ul>
+						<li><a href="https://www.zengdongliang.cn/wp-login.php">登录</a></li>
+			<li><a href="https://www.zengdongliang.cn/feed/">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://www.zengdongliang.cn/comments/feed/">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。">WordPress.org</a></li>			</ul>
+			</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			<header class="page-header">
+				<h1 class="page-title">分类：OpenShift</h1>			</header><!-- .page-header -->
+
+			
+<article id="post-1038" class="post-1038 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin%e9%85%8d%e7%bd%ae%e6%b5%81%e6%b0%b4%e7%ba%bf/" rel="bookmark">Openshift Origin配置流水线</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>1、创建sw-dev项目</p>
+<pre class="lang:default decode:true ">oc new-project sw-dev</pre>
+<p>2、为sw-dev项目Build及部署应用</p>
+<pre class="lang:default decode:true ">oc new-app openshift/python-36-centos7-example~http://git.gitlab.apps.10.16.40.50.nip.io/sw/example.git</pre>
+<p>4、为sw-dev创建Route</p>
+<pre class="lang:default decode:true ">oc expose svc example --hostname=example-sw-dev.apps.10.16.40.50.nip.io</pre>
+<p>5、创建sw-sit项目</p>
+<pre class="lang:default decode:true ">oc new-project sw-sit</pre>
+<p>6、创建sw-prod项目</p>
+<pre class="lang:default decode:true ">oc new-project sw-prod</pre>
+<p>7、配置Jenkins访问权限</p>
+<pre class="lang:default decode:true ">oc policy add-role-to-user edit system:serviceaccount:ci:jenkins -n sw-dev
+oc policy add-role-to-user edit system:serviceaccount:cd:jenkins -n sw-sit
+oc policy add-role-to-user edit system:serviceaccount:ci:jenkins -n sw-prod</pre>
+<p>8、配置sw-sit拉sw-dev镜像权限</p>
+<pre class="lang:default decode:true ">oc policy add-role-to-user system:image-puller system:serviceaccount:sw-sit:default -n sw-dev</pre>
+<p>9、配置sw-prod拉sw-sit镜像权限</p>
+<pre class="lang:default decode:true ">oc policy add-role-to-user system:image-puller system:serviceaccount:sw-prod:default -n sw-sit</pre>
+<p>10、在sw-sit创建IS</p>
+<pre class="lang:default decode:true ">oc tag sw-dev/example:latest sw-sit/example:latest</pre>
+<p>11、在sw-sit项目中部署应用</p>
+<pre class="lang:default decode:true ">oc new-app -i sw-sit/example:latest</pre>
+<p>12、为sw-dev创建Route</p>
+<pre class="lang:default decode:true">oc expose svc example --hostname=example-sw-sit.apps.10.16.40.50.nip.io</pre>
+<p>13、在sw-prod创建IS</p>
+<pre class="lang:default decode:true ">oc tag sw-sit/example:latest sw-prod/example:stage</pre>
+<p>14、在sw-sit项目中部署应用</p>
+<pre class="lang:default decode:true ">oc new-app -i sw-prod/example:stage</pre>
+<p>15、为sw-dev创建Route</p>
+<pre class="lang:default decode:true ">oc expose svc example --hostname=example-sw-prod.apps.10.16.40.50.nip.io</pre>
+<p>16、在Jenkins中创建sw-dev构建配置<br />
+1）、登录Jenkins控制台，单击欢迎页面左边的New Item链接，输入名称sw-dev，选择类型Freestlye project，确认并创建<br />
+2）、跳转到配置页面后，单击页面下方的Add build step按钮，选择添加类型为Trigre OpenShift Build的条目。出现相关的参数如下：</p>
+<img class="alignnone  wp-image-1039" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-tob-300x100.png" alt="" width="648" height="216" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-tob-300x100.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-tob-768x257.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-tob-1024x342.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-tob.png 1382w" sizes="(max-width: 648px) 100vw, 648px" />
+<p>3）、再次单击页面下方的Add build step按钮，选择添加类型为Execute Shell的条目。在Command文本框输入如下:</p>
+<img class="alignnone  wp-image-1040" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-es-300x36.png" alt="" width="658" height="79" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-es-300x36.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-es-768x92.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-es-1024x123.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-dev-es.png 1366w" sizes="(max-width: 658px) 100vw, 658px" />
+<p>4）、完成编辑后，单击Save按钮保存并返回到Jenkins主页，后面就可以在Jenkins中对sw-dev进行Build了。</p>
+<p>17、在Jenkins中创建sw-sit构建配置<br />
+1）、登录Jenkins控制台，单击欢迎页面左边的New Item链接，输入名称sw-dev，选择类型Freestlye project，确认并创建<br />
+2）、跳转到配置页面后，单击页面下方的Add build step按钮，选择添加类型为Tag OpenShift Image的条目。出现相关的参数如下：</p>
+<img class="alignnone  wp-image-1041" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-300x118.png" alt="" width="671" height="264" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-300x118.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-768x303.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1024x404.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi.png 1386w" sizes="(max-width: 671px) 100vw, 671px" />
+<p>3）、再次单击页面下方的Add build step按钮，选择添加类型为Trigre OpenShift Deployment的条目。出现相关的参数如下:</p>
+<p><img class="alignnone  wp-image-1042" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-tod-300x60.png" alt="" width="660" height="132" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-tod-300x60.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-tod-768x152.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-tod-1024x203.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-tod.png 1365w" sizes="(max-width: 660px) 100vw, 660px" />4）、再次单击页面下方的Add build step按钮，选择添加类型为Execute Shell的条目。在Command文本框输入如下:</p>
+<img class="alignnone  wp-image-1043" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-es-300x35.png" alt="" width="677" height="79" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-es-300x35.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-es-768x91.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-es-1024x121.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-es.png 1372w" sizes="(max-width: 677px) 100vw, 677px" />
+<p>5）、完成编辑后，单击Save按钮保存并返回到Jenkins主页，后面就可以在Jenkins中对sw-sit进行Build了。</p>
+<p>18、在Jenkins中创建sw-prod构建配置<br />
+1）、登录Jenkins控制台，单击欢迎页面左边的New Item链接，输入名称sw-dev，选择类型Freestlye project，确认并创建<br />
+2）、跳转到配置页面后，单击页面下方的Add build step按钮，选择添加类型为Tag OpenShift Image的条目。出现相关的参数如下：</p>
+<img class="alignnone  wp-image-1044" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1-300x118.png" alt="" width="666" height="262" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1-300x118.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1-768x303.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1-1024x404.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-toi-1.png 1386w" sizes="(max-width: 666px) 100vw, 666px" />
+<p>3）、再次单击页面下方的Add build step按钮，选择添加类型为Trigre OpenShift Deployment的条目。出现相关的参数如下:</p>
+<img class="alignnone  wp-image-1045" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-tod-300x59.png" alt="" width="661" height="130" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-tod-300x59.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-tod-768x150.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-tod-1024x200.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-tod.png 1361w" sizes="(max-width: 661px) 100vw, 661px" />
+<p>4）、再次单击页面下方的Add build step按钮，选择添加类型为Execute Shell的条目。在Command文本框输入如下:</p>
+<img class="alignnone  wp-image-1046" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-es-300x35.png" alt="" width="660" height="77" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-es-300x35.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-es-768x90.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-es-1024x120.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-es.png 1352w" sizes="(max-width: 660px) 100vw, 660px" />
+<p>5）、完成编辑后，单击Save按钮保存并返回到Jenkins主页，后面就可以在Jenkins中对sw-prod进行Build了。</p>
+<p>19、配置Build Pipeline<br />
+1）、配置sw-sit，如下图</p>
+<img class="alignnone  wp-image-1047" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-build-after-300x74.png" alt="" width="653" height="161" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-build-after-300x74.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-build-after-768x191.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-build-after-1024x254.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-sit-build-after.png 1427w" sizes="(max-width: 653px) 100vw, 653px" />
+<p>2）、配置sw-prod，如下图</p>
+<img class="alignnone  wp-image-1048" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-build-after-300x71.png" alt="" width="659" height="156" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-build-after-300x71.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-build-after-768x182.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-build-after-1024x242.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-prod-build-after.png 1428w" sizes="(max-width: 659px) 100vw, 659px" />
+<p>3）、安装Build Pipeline插件<br />
+4）、创建流水线视图<br />
+安装插件之后，回到Jenkins控制台，单击右边列表标题旁边的加号（+）按钮，添加一个新的视图，反选视图的类型为Build Pipeline。<br />
+在配置界面，在Select Initial Job（起始任务）选择sw-dev。</p>
+<img class="alignnone  wp-image-1049" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-pipeline-300x59.png" alt="" width="681" height="134" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-pipeline-300x59.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-pipeline-768x150.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/sw-pipeline-1024x200.png 1024w" sizes="(max-width: 681px) 100vw, 681px" />	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin%e9%85%8d%e7%bd%ae%e6%b5%81%e6%b0%b4%e7%ba%bf/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-19T17:30:56+08:00">六月 19, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin%e9%85%8d%e7%bd%ae%e6%b5%81%e6%b0%b4%e7%ba%bf/#respond"><span class="screen-reader-text">于Openshift Origin配置流水线</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-1038 -->
+
+<article id="post-1036" class="post-1036 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/19/%e9%83%a8%e7%bd%b2jenkins/" rel="bookmark">部署Jenkins</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>1、创建ci项目</p>
+<pre class="lang:default decode:true ">oc new-project ci</pre>
+<p>2、部署持久化存储，请参考</p>
+<p><a href="https://www.zengdongliang.cn/2018/06/19/%E5%9C%A8openshift-origin%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83%E4%B8%AD%E9%83%A8%E7%BD%B2gitlab/" target="_blank" rel="noopener"><a href="https://www.zengdongliang.cn/2018/06/19/%E5%9C%A8openshift-origin%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83%E4%B8%AD%E9%83%A8%E7%BD%B2gitlab/">https://www.zengdongliang.cn/2018/06/19/%E5%9C%A8openshift-origin%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83%E4%B8%AD%E9%83%A8%E7%BD%B2gitlab/</a></a></p>
+<p>中的第3和4点</p>
+<p>3、为sa账号增加权限</p>
+<pre class="lang:default decode:true ">oc policy add-role-to-user edit -z default
+oc policy add-role-to-user edit -z jenkins</pre>
+<p>4、部署模板</p>
+<pre class="lang:default decode:true ">oc new-app --template=jenkins</pre>
+<p>&nbsp;</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/19/%e9%83%a8%e7%bd%b2jenkins/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-19T16:35:42+08:00">六月 19, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/19/%e9%83%a8%e7%bd%b2jenkins/#respond"><span class="screen-reader-text">于部署Jenkins</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-1036 -->
+
+<article id="post-1034" class="post-1034 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/19/%e5%9c%a8openshift-origin%e9%9b%86%e7%be%a4%e7%8e%af%e5%a2%83%e4%b8%ad%e9%83%a8%e7%bd%b2gitlab/" rel="bookmark">在OpenShift Origin集群环境中部署Gitlab</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>1、创建gitlab项目</p>
+<pre class="lang:default decode:true ">oc new-project gitlab</pre>
+<p>2、导入gitlab模板</p>
+<pre class="lang:default decode:true ">oc create -f https://gitlab.com/gitlab-org/omnibus-gitlab/raw/master/docker/openshift-template.json</pre>
+<p>3、配置NFS存储<br />
+1）、安装rpcbind 和nfs-utils软件</p>
+<pre class="lang:default decode:true ">yum install -y rpcbind nfs-utils</pre>
+<p>2）、配置exportfs<br />
+vim /etc/exports<br />
+增加</p>
+<pre class="lang:default decode:true ">/exports/gitlab-ce-etc *(rw,sync,no_root_squash,no_all_squash,no_subtree_check)
+/exports/gitlab-ce-redis-data *(rw,sync,no_root_squash,no_all_squash,no_subtree_check)
+/exports/gitlab-ce-data *(rw,sync,no_root_squash,no_all_squash,no_subtree_check)
+/exports/gitlab-ce-postgresql *(rw,sync,no_root_squash,no_all_squash,no_subtree_check)</pre>
+<p>3）、创建目录及修改权限</p>
+<pre class="lang:default decode:true ">mkdir -pv /exports/{gitlab-ce-etc,gitlab-ce-redis-data,gitlab-ce-data,gitlab-ce-postgresql}
+chown -R nfsnobody:nfsnobody /exports
+cd /exports
+chmod o+rwx *</pre>
+<p>4）、启动nfs</p>
+<pre class="lang:default decode:true ">systemctl restart rpcbind
+systemctl restart nfs-server</pre>
+<p>5）、确认nfs使用的相关端口</p>
+<pre class="lang:default decode:true ">[root@node3 exports]# rpcinfo -p
+program vers proto port service
+100000 4 tcp 111 portmapper
+100000 3 tcp 111 portmapper
+100000 2 tcp 111 portmapper
+100000 4 udp 111 portmapper
+100000 3 udp 111 portmapper
+100000 2 udp 111 portmapper
+100024 1 udp 43685 status
+100024 1 tcp 59903 status
+100005 1 udp 20048 mountd
+100005 1 tcp 20048 mountd
+100005 2 udp 20048 mountd
+100005 2 tcp 20048 mountd
+100005 3 udp 20048 mountd
+100005 3 tcp 20048 mountd
+100003 3 tcp 2049 nfs
+100003 4 tcp 2049 nfs
+100227 3 tcp 2049 nfs_acl
+100003 3 udp 2049 nfs
+100003 4 udp 2049 nfs
+100227 3 udp 2049 nfs_acl
+100021 1 udp 49295 nlockmgr
+100021 3 udp 49295 nlockmgr
+100021 4 udp 49295 nlockmgr
+100021 1 tcp 35792 nlockmgr
+100021 3 tcp 35792 nlockmgr
+100021 4 tcp 35792 nlockmgr</pre>
+<p>6）、修改iptables<br />
+在/etc/sysconfig/iptables文件中如下内容</p>
+<pre class="lang:default decode:true ">-A INPUT -p tcp -m state --state NEW -m tcp --dport 111 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 20048 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 2049 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 43685 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 49295 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 35792 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 59903 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 111 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 20048 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 2049 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 43685 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 49295 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 35792 -j ACCEPT
+-A INPUT -p udp -m state --state NEW -m udp --dport 59903 -j ACCEPT</pre>
+<p>重启iptables<br />
+systemctl restart iptables</p>
+<p>7）、验证nfs</p>
+<pre class="lang:default decode:true ">showmount -e 10.16.40.53
+
+mount 10.16.40.53:/exports/gitlab-ce-etc /mnt</pre>
+<p>4、创建PV</p>
+<p>1）、创建gitlab-ce-etc</p>
+<pre class="lang:default decode:true ">{
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+        "name": "pv-gitlab-ce-etc"
+    },
+    "spec": {
+        "capacity": {
+            "storage": "110Mi"
+        },
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "nfs": {
+            "path": "/exports/gitlab-ce-etc",
+            "server": "10.16.40.53"
+        },
+        "persistentVolumeReclaimPolicy": "Recycle"
+    }
+}</pre>
+<p>2）、创建gitlab-ce-redis-data</p>
+<pre class="lang:default decode:true ">{
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+        "name": "pv-gitlab-ce-redis-data"
+    },
+    "spec": {
+        "capacity": {
+            "storage": "512Mi"
+        },
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "nfs": {
+            "path": "/exports/gitlab-ce-redis-data",
+            "server": "10.16.40.53"
+        },
+        "persistentVolumeReclaimPolicy": "Recycle"
+    }
+}</pre>
+<p>3）、创建gitlab-ce-postgresql</p>
+<pre class="lang:default decode:true ">{
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+        "name": "pv-gitlab-ce-postgresql"
+    },
+    "spec": {
+        "capacity": {
+            "storage": "2Gi"
+        },
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "nfs": {
+            "path": "/exports/gitlab-ce-postgresql",
+            "server": "10.16.40.53"
+        },
+        "persistentVolumeReclaimPolicy": "Recycle"
+    }
+}
+</pre>
+<p>4）、创建 gitlab-ce-data</p>
+<pre class="lang:default decode:true ">{
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+        "name": "pv-gitlab-ce-data"
+    },
+    "spec": {
+        "capacity": {
+            "storage": "5Gi"
+        },
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "nfs": {
+            "path": "/exports/gitlab-ce-data",
+            "server": "10.16.40.53"
+        },
+        "persistentVolumeReclaimPolicy": "Recycle"
+    }
+}</pre>
+<p>oc get pv</p>
+<pre class="lang:default decode:true">[root@node3 exports]# oc get pv
+NAME                      CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                         STORAGECLASS   REASON    AGE
+pv-gitlab-ce-data         5Gi        RWO            Recycle          Bound     gitlab/gitlab-ce-data                                  4h
+pv-gitlab-ce-etc          110Mi      RWO            Recycle          Bound     gitlab/gitlab-ce-etc                                   4h
+pv-gitlab-ce-postgresql   2Gi        RWO            Recycle          Bound     gitlab/gitlab-ce-postgresql                            4h
+pv-gitlab-ce-redis-data   512Mi      RWO            Recycle          Bound     gitlab/gitlab-ce-redis-data                            4h</pre>
+<p><span style="color: #ff0000;">5）、配置运行SSC</span></p>
+<pre class="lang:default decode:true  ">oc adm policy add-scc-to-user anyuid -z default -n gitlab
+oc adm policy add-scc-to-user anyuid -z gitlab-ce-user -n gitlab</pre>
+<p><span style="color: #ff0000;">6、注意</span><br />
+1）、postgresql容器在启动后会自动检测数据库gitlabhq_production，所以要手动创建，不然容器会自动停止。<br />
+2）、gitlab-ce容器建议分配2CPU，内存调整到2G,不然容器启动有可能会自动重启。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/19/%e5%9c%a8openshift-origin%e9%9b%86%e7%be%a4%e7%8e%af%e5%a2%83%e4%b8%ad%e9%83%a8%e7%bd%b2gitlab/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-19T16:22:17+08:00">六月 19, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/19/%e5%9c%a8openshift-origin%e9%9b%86%e7%be%a4%e7%8e%af%e5%a2%83%e4%b8%ad%e9%83%a8%e7%bd%b2gitlab/#respond"><span class="screen-reader-text">于在OpenShift Origin集群环境中部署Gitlab</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-1034 -->
+
+<article id="post-1032" class="post-1032 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin-v3-9-%e9%9b%86%e7%be%a4%e5%ae%89%e8%a3%85/" rel="bookmark">OpenShift Origin V3.9 集群安装</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>参考<a href="https://blog.csdn.net/sun_qiangwei/article/details/80443943" target="_blank" rel="noopener"><a href="https://blog.csdn.net/sun_qiangwei/article/details/80443943">https://blog.csdn.net/sun_qiangwei/article/details/80443943</a></a></p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin-v3-9-%e9%9b%86%e7%be%a4%e5%ae%89%e8%a3%85/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-19T15:56:31+08:00">六月 19, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/19/openshift-origin-v3-9-%e9%9b%86%e7%be%a4%e5%ae%89%e8%a3%85/#respond"><span class="screen-reader-text">于OpenShift Origin V3.9 集群安装</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-1032 -->
+
+<article id="post-1004" class="post-1004 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/08/%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3/" rel="bookmark">核心组件详解</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>OpenShift的核心组件及其之间的关联关系如下图所示。OpenShift在容器编排层使用了Kubernetes，所以OpenShift在架构上和Kubernetes十分接近。其内部的许多组件和概念是从kubernetes衍生而来，但是也存在一些在容器编排层之上，OpenShift特有的组件和概念。</p>
+<img class="alignnone  wp-image-1005" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/core-com-300x181.png" alt="" width="628" height="379" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/core-com-300x181.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/core-com-768x464.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/core-com-1024x619.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/core-com.png 1092w" sizes="(max-width: 628px) 100vw, 628px" />
+<p>1、Master节点<br />
+先补充一此内容，OpenShift集群可以由一台或多台主机组成。这些主机可以是物理机或虚拟机，同时可以运行在私有云、公有云，或混合云上。在OpenShift的集群成员有两种角色。</p>
+<p>Master节点：即主控制节点。集群内的管理组件均运行于Master节点之上。Master节点负责管理和维护OpenShift集群的状态。</p>
+<p>Node节点：即计算节点。集群内的容器实例均运行于Node节点之上。</p>
+<p>API Server：负载提供集群的Web Console以及RESTful API服务。集群内的所有Node节点都会访问API Server更新各节点的状态及其上运行的容器的状态。</p>
+<p>数据源（Data Store）。集群所有动态的状态信息都会存储在后端一个etcd分布式数据库中。默认etcd实例安装在Master节点上。如有需要，也可以将etcd节点部署在集群之外。</p>
+<p>调度控制器（Scheduler）。调度控制器在容器部署时负责按照用户输入的要求寻找合适的计算节点。</p>
+<p>复制控制器（Replication Controller）。对容器云而言，一个很重要的特性是异常自恢复。复制控制负责监控当前容器实例的数据量和用户部署指定的数量是否匹配。如容器异常退出，复制控制将会发现实际的容器实例数少于部署定义的数量，从而触发部署新的容器实例，以恢复原有的状态。</p>
+<p>2、Node节点</p>
+<p>其主要职责就是接收Master节点的指令，运行和维护Docker容器。</p>
+<p>可以通过oc get node查看系统中的所有节点</p>
+<pre class="lang:default decode:true ">[root@master master]# oc get node
+NAME      STATUS    ROLES     AGE       VERSION
+master    Ready     master    7d        v1.9.1+a0ce1bc657
+node1     Ready     compute   7d        v1.9.1+a0ce1bc657
+node2     Ready     compute   7d        v1.9.1+a0ce1bc657
+node3     Ready     compute   7d        v1.9.1+a0ce1bc657</pre>
+<p>注意：<br />
+查看集群信息需要集群管理员的权限。</p>
+<p>可以通过oc describe node master查看节点的详细信息</p>
+<pre class="lang:default decode:true ">[root@master ~]# oc describe node master
+Name:               master
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/hostname=master
+                    node-role.kubernetes.io/master=true
+                    region=infra
+Annotations:        volumes.kubernetes.io/controller-managed-attach-detach=true
+Taints:             &lt;none&gt;
+CreationTimestamp:  Fri, 01 Jun 2018 11:37:35 +0800
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  OutOfDisk        False   Fri, 08 Jun 2018 16:15:24 +0800   Fri, 01 Jun 2018 11:37:35 +0800   KubeletHasSufficientDisk     kubelet has sufficient disk space available
+  MemoryPressure   False   Fri, 08 Jun 2018 16:15:24 +0800   Fri, 01 Jun 2018 11:37:35 +0800   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Fri, 08 Jun 2018 16:15:24 +0800   Fri, 01 Jun 2018 11:37:35 +0800   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  Ready            True    Fri, 08 Jun 2018 16:15:24 +0800   Fri, 01 Jun 2018 15:30:40 +0800   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.16.40.50
+  Hostname:    master
+Capacity:
+ cpu:     4
+ memory:  8009764Ki
+ pods:    40
+Allocatable:
+ cpu:     4
+ memory:  7907364Ki
+ pods:    40
+System Info:
+ Machine ID:                         9f2b440b1f7a42cb9e5fe320e9f8c7f0
+ System UUID:                        2BCA3E42-B451-9C7E-0963-8481BA5A23E8
+ Boot ID:                            f43bcd20-fb8d-4112-94ed-30dc3d3028c9
+ Kernel Version:                     3.10.0-862.3.2.el7.x86_64
+ OS Image:                           CentOS Linux 7 (Core)
+ Operating System:                   linux
+ Architecture:                       amd64
+ Container Runtime Version:          docker://1.13.1
+ Kubelet Version:                    v1.9.1+a0ce1bc657
+ Kube-Proxy Version:                 v1.9.1+a0ce1bc657
+ExternalID:                          master
+Non-terminated Pods:                 (6 in total)
+  Namespace                          Name                           CPU Requests  CPU Limits  Memory Requests  Memory Limits
+  ---------                          ----                           ------------  ----------  ---------------  -------------
+  default                            docker-registry-1-h4dqs        100m (2%)     0 (0%)      256Mi (3%)       0 (0%)
+  default                            router-2-qhrp2                 100m (2%)     0 (0%)      256Mi (3%)       0 (0%)
+  kube-service-catalog               apiserver-fp2bd                0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  kube-service-catalog               controller-manager-kfwct       0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  openshift-template-service-broker  apiserver-qpd42                0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  openshift-web-console              webconsole-5f649b49b5-vvhkw    100m (2%)     0 (0%)      100Mi (1%)       0 (0%)
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  CPU Requests  CPU Limits  Memory Requests  Memory Limits
+  ------------  ----------  ---------------  -------------
+  300m (7%)     0 (0%)      612Mi (7%)       0 (0%)
+Events:         &lt;none&gt;</pre>
+<p>从上面的输出可以看到该节点详细的系统信息、节点上运行的容器资源使用情况、网络地址等。</p>
+<p>3、Project和Namespace</p>
+<p>在Kubernetes中使用命名空间的概念来分隔资源。在同一个命名空间中，某一个对象的名称在其分类中必须是唯一，但是分布在不同命令空间的对象则可以同名。OpenShift中继承了Kubernetes命名空间的概念，而且在其之上定义了Project对象的概念。每一个Project会和一个Namespace相关联，甚至可以简单地认为，Project就是Namespace。所以在OpenShift中进行操作时，首先要确认当前执行的上下文是哪一个Project。</p>
+<p>通过oc project查看用户当前所在的Project。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc project default
+Now using project "default" on server "https://master:8443".</pre>
+<p>通过oc get project查看当前用户可以查看的Project。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc get project
+NAME                                DISPLAY NAME      STATUS
+default                                               Active
+example                             My Example        Active
+hello-world                         Hello World       Active
+hello-world-oc                                        Active
+hello-world-php                     Hello World PHP   Active
+kube-public                                           Active
+kube-service-catalog                                  Active
+kube-system                                           Active
+logging                                               Active
+management-infra                                      Active
+mybank                              My Bank           Active
+openshift                                             Active
+openshift-ansible-service-broker                      Active
+openshift-infra                                       Active
+openshift-node                                        Active
+openshift-template-service-broker                     Active
+openshift-web-console                                 Active
+python-example                      Python Example    Active</pre>
+<p>通过oc project &lt;project_name&gt;可以切换到指定的项目。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc project hello-world
+Now using project "hello-world" on server "https://master:8443".</pre>
+<p>4、Pod<br />
+在OpenShift上运行的容器会被一种叫Pod的对象所“包裹”，用户不会直接看到Docker容器本身。从技术上来说，Pod其实也是种特殊的容器。<br />
+执行oc get pod命令可以看到当前项目的Pod。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc get pod
+NAME                      READY     STATUS    RESTARTS   AGE
+hello-openshift-1-qnvw8   1/1       Running   0          5d</pre>
+<p>执行oc describe pod可以查看容器的详细信息，如Pod部署的Node节点名，所处的Project、IP地址等。</p>
+<pre class="lang:default decode:true">[root@master master]# oc describe pod hello-openshift-1-qnvw8
+Name:           hello-openshift-1-qnvw8
+Namespace:      hello-world
+Node:           node3/10.16.40.53
+Start Time:     Sun, 03 Jun 2018 15:04:28 +0800
+Labels:         app=hello-openshift
+                deployment=hello-openshift-1
+                deploymentconfig=hello-openshift
+Annotations:    openshift.io/deployment-config.latest-version=1
+                openshift.io/deployment-config.name=hello-openshift
+                openshift.io/deployment.name=hello-openshift-1
+                openshift.io/generated-by=OpenShiftWebConsole
+                openshift.io/scc=restricted
+Status:         Running
+IP:             10.131.0.20
+Controlled By:  ReplicationController/hello-openshift-1
+Containers:
+  hello-openshift:
+    Container ID:   docker://db992cba0e6f781010df9f950f219c15f0e19472e5544813857ab319cc4ff40c
+    Image:          openshift/hello-openshift@sha256:aaea76ff622d2f8bcb32e538e7b3cd0ef6d291953f3e7c9f556c1ba5baf47e2e
+    Image ID:       docker-pullable://docker.io/openshift/hello-openshift@sha256:aaea76ff622d2f8bcb32e538e7b3cd0ef6d291953f3e7c9f556c1ba5baf47e2e
+    Ports:          8080/TCP, 8888/TCP
+    State:          Running
+      Started:      Sun, 03 Jun 2018 15:05:04 +0800
+    Ready:          True
+    Restart Count:  0
+    Environment:    &lt;none&gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-nkbtf (ro)
+Conditions:
+  Type           Status
+  Initialized    True 
+  Ready          True 
+  PodScheduled   True 
+Volumes:
+  default-token-nkbtf:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-nkbtf
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  node-role.kubernetes.io/compute=true
+Tolerations:     &lt;none&gt;
+Events:          &lt;none&gt;</pre>
+<p>用户可以近似认为实际部署的容器会运行在Pod内部。一个Pod内部可以运行一个或多个容器，运行在一个Pod内的多个容器共享这个Pod的网络及存储资源从这个层面上，可以将Pod理解为一个虚拟主机，在这个虚拟主机中，用户可以运行一个或多个容器。虽然一个Pod内可以有多个容器，但在绝大多数情况下，一Pod内部只运行一个容器实例。Pod其实也是一个Docker容器，通过docker ps你命令可以查看实例信息。</p>
+<p>容器像盒子一样为应用提供一个独立的运行环境，但它并不是一个罢盒子，用户可以实时地查看容器的输出，也可以进入容器内部执行操作。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc logs hello-openshift-1-qnvw8
+serving on 8888
+serving on 8080
+Servicing request.
+Servicing request.
+Servicing request.
+Servicing request.</pre>
+<pre class="lang:default decode:true ">[root@master master]# oc rsh mysql-1-vn9wj
+sh-4.2$ hostname
+mysql-1-vn9wj</pre>
+<p>5、Service<br />
+容器是一个一个非持久化的对象。所有对容器的更新在容器销毁后默认都会丢失。同一个Docker镜像实例化后形成容器后，会恢复到这个镜像定义的状态。<br />
+并且获取一个新的IP地址。容器的这种特性在某些场景下非常好，但是每个新容器的IP地址在不断变化，这也不一定是好事，如一个容器的运行依赖于另一个容器，这时被依赖的容器的IP地址改变了，哪依赖于它的容器就会有问题。<br />
+为了解决这个问题，Kubernetes提供了一种叫Service（服务）的组件。当部署某个应用时，我们会为该应用创建一个Service对象。Service对象会与该应用的一个或多个Pod关联。同时每个Service会被分配到一个IP地址，这个IP地址相对恒定的。通过访问这个IP地址及相应的端口，请求就会被转发到对应的Pod的相应端口。这意味，无论后端的Pod实例的数量或地址如何变化，前端的应用只需要访问Servic的IP地址，就能连接到正确的后端容器实例。Service起到了代理的作用，在相互依赖的容器应用之间实现解耦。</p>
+<p>通过oc get svc，可能获取当前项目下所有Service对象的列表。</p>
+<pre class="lang:default decode:true">[root@master master]# oc get svc
+NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+cakephp-mysql-example   ClusterIP   172.30.195.63   &lt;none&gt;        8080/TCP   5d
+mysql                   ClusterIP   172.30.2.251    &lt;none&gt;        3306/TCP   5d</pre>
+<p>如果尝试ping一下Service的IP地址，结果是不会成功的。因为Service的IP地址是虚拟的IP地址，而且这个地址只有在集群内的节点和容器可以识别。</p>
+<p>除了通过IP地址访问Service所指向的服务外，还可以通过域名访问某个Service。监听在Master上集群内置DNS服务器会负载解析这个DNS请求。Service域名的格式是&lt;SERVER_NAME&gt;.&lt;PROJECT_NAME&gt;.svc.cluster.local。</p>
+<p>6、Router与Route<br />
+Service提供了一个通往后端Pod集群的稳定的入口，但是Service的IP地址只是集群内部的节点及容器可见。对于外部的应用或用户来说，这个地址不可达的，那么外部的用户相要访问Service指向的服务要怎么办？OpenShift提供了Router（路由器）来解决这个问题。其中Router组件就是一个运行在容器内的Haproxy，是一个特殊定制Haproxy。用户可以创建一个叫Route的对象，称为路由规则。一个Route会与一个Service相关联，并且绑定一个域名。Route规则会被Router加载。当用户通过指定域名访问应用时，域名会被解析并指向Router所在的计算节点上。Router获取这个请求，然后根据Route规则定义转发给与这域名对应的Service后端所关联的Pod容器实例。</p>
+<p>通过oc get route，可以查看项目中所有的Route.</p>
+<pre class="lang:default decode:true">[root@master master]# oc get route
+NAME                    HOST/PORT                                                       PATH      SERVICES                PORT      TERMINATION   WILDCARD
+cakephp-mysql-example   cakephp-mysql-example-hello-world-php.apps.10.16.40.50.nip.io             cakephp-mysql-example   &lt;all&gt;                   None</pre>
+<p>7、Persisten Storage<br />
+容器默认是非持久化的，所有的修改在容器销毁时都会丢失。但现实是传统的应用大多数都是有状态的，因此要求某些容器内的数据必须持久化，容器平台必须为容器提供持久化存储（Persisten Storage）。Docker本身提供了持久化卷挂载的能力相对于单机容器的场景，在容器云集群的场景中，持久化的实现有更多细节需要考虑。OpenShift除了支持Docker持久化卷的挂载方式外，还提供了一种持久化供给模型，即Persist Volume（持久化卷，PV）及Persisten Volume Claim（持久化卷请求，PVC）模型。在PV和PVC模型中，集群管理员会创建大量不同大小和不同特性的PV。用户在部署应用时，显式声明对持久化的需求创建PVC。用户在PVC中定义所需存储的大小、访问方式（只读或可读可写；独占或共享）。OpenShift集群会自动寻找符合要求的PV与PVC自动对接。通过PV和PVC模型，OpenShit为用户提供了一种灵活的方式来消费存储资源。</p>
+<p>OpenShift对持久化后端的支持比较广泛，除了NFS及iSCSI外，还支持如Ceph、GlusterFS等分布式存储，以及<br />
+Amazon WebService和Google Compute Engine的云硬盘。</p>
+<p>8、Registry<br />
+OpenShift提供了一个内部的Docker镜像仓库（Registry），该镜像仓库用于存放用户通过内置的Source to Image<br />
+镜像构建流程所产生的镜像。Registry组件默认以容器的方式提供。</p>
+<p>通过oc get pod -n default可以查看Registry容器的状态。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc get pod -n default
+NAME                       READY     STATUS    RESTARTS   AGE
+docker-registry-1-h4dqs    1/1       Running   3          7d
+registry-console-1-tncbf   1/1       Running   1          7d</pre>
+<p>通过oc get svc -n default 可以查看Registry的Service内容。</p>
+<pre class="lang:default decode:true ">[root@master master]# oc get svc -n default
+NAME               TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                   AGE
+docker-registry    ClusterIP   172.30.127.228   &lt;none&gt;        5000/TCP                  7d
+registry-console   ClusterIP   172.30.197.229   &lt;none&gt;        9000/TCP                  7d</pre>
+<p>每当S2I完成镜像构建，就会向内部的镜像仓库推送构建完成的镜像。</p>
+<p>9、Source to Image<br />
+Source to Image（S2I）是OpenShift的一个重要功能。容器镜像是容器云的应用交付格式。容器镜像中包含了应用及所依赖的运行环境，可以从社区或第三方获取基础的操作系统或中间件的镜像。但是这些外部镜像并不包含企业内部开发和定制的应用。企业内部的开发人员必须自行基于外部镜像构建包含企业自身开发的应用。这个镜像的构建过程是必须的，要么是由企业的IT人员手工完成，要么使用某种工具实现自动化。</p>
+<p>OpenShift提供了S2I的流程，使得企业内容器的构建变得标准化和自动化，从而提高了软件从开发到上线的效率。<br />
+一个典型的S2I流程包含以下几个步骤：<br />
+1）、用户输入源代码仓库的地址<br />
+2）、用户选择S2I构建的基础镜像（以称为Builer镜像）。Builer镜像中包含了操作系统、编程语言、框架等应用所需的软件及配置。OpenShift默认提供了多种编程语言的Builer镜像，如Java、PHP、Ruby、Python、Perl等。用户也可以<br />
+根据自身需求定制自己的Builer镜像，并发布到服务目录中借用选用。<br />
+3）、用户或系统触发构建。OpenShift将实例化S2I构建执行器。<br />
+4）、S2I构建执行器从用户指定的代码仓库地址下载源代码。<br />
+5）、S2I构建执行器实例化Builer镜像。代码将会被注入Builer镜像中。<br />
+6）、Builer镜像将根据预定义的逻辑执行源代码的编译、构建并完成部署。<br />
+7）、S2I构建执行器将完成操作的Builer镜像并生成新的Docker镜像。<br />
+8）、S2I构建执行器将新的镜像推送到OpenShift内部的镜像仓库<br />
+9）、S2I构建执行器更新该次构建相关的Image Stream信息。</p>
+<p>S2I构建完成后，根据用户定义的部署逻辑，OpenShift将把镜像实例化部署到集群中。<br />
+除了接受源代码仓库地址作为输入外，S2I还接受Dockerfile以及二进制文件作为构建的输入。</p>
+<p>10、Image Stream</p>
+<p>每一个Image Stream代表着一个Docker-formatted Container Image,它其实只是一个在OpenShift中内部对于Docker image的命名方式让系统可以使用指定的名称找到正确的docker image来使用（有点类似Docker中对每个image使用tag来命名）。</p>
+<p>也因为有自己内部的命名方式，Image Stream就可以包含以下来源的Image</p>
+<p style="padding-left: 30px;">
+OpenShift内部的Container Registry
+其他的image stream
+外部的image repository（如Docker Hub，CoreOS Quay)</p>
+<p>在OpenShift中，image stream可与Build及部署一起完成怎么化功能。由于Build和部署可以监控指定image stream<br />
+，当image stream指向的image有新版本产生是，可自动的进行特定的Build可部署。</p>
+<p>11、开发及管理工具集<br />
+OpenShift提供了不同的工具集为开发和运维的用户提供良好的体验，也为持续集成和打通DevOps流程提供便利。如OpenShift提供了Eclipse插件，开发工程师可以在Eclipse中完成应用及服务的创建和部署、远程调试、实时日志查询等功能。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/08/%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-08T18:01:56+08:00">六月 8, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/08/%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3/#respond"><span class="screen-reader-text">于核心组件详解</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-1004 -->
+
+<article id="post-935" class="post-935 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/03/docker%e3%80%81kubernetes%e4%b8%8eopenshift/" rel="bookmark">Docker、Kubernetes与OpenShift</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>OpenShift是基于容器技术构建的一个云平台。这里指的容器技术即包含Docker与Kubernetes。OpenShift底层以Docker作为容器引擎驱动，以Kubernetes作为容器编排引擎组件。OpenShift提供了开发语言、中间件、自动化流程工具及界面元素，提供了一套完整的基于容器的应用云平台。</p>
+<h4>1、容器引擎</h4>
+<p>Docker的优势在于它可以构建一个隔离的、稳定的、安全的、高性能的容器运行环境。</p>
+<p>Docker Hub上有海量的镜像资源。可以无缝地运行在OpenShift平台上。</p>
+<p>OpenShift使用的是Docker原生的Docker，没有任何闭源的修改。</p>
+<h4>2、容器编排</h4>
+<p>当企业或组织要大规模地将容器技术应用到生产环境中，除了优秀的容器引擎提供稳定可靠及高效的运行环境之处，还需要考虑集群管理、高可用、安全、持续集成等方方面面的问题。单凭一个容器引擎，并不能满足容器技术在生产环境的需求，尤其规模较大的生产环境。</p>
+<p>为了满足容器集群所需的调度、网络、存储、性能及安全的需求，我们必须有专业的工具和平台。这些关于容器集群管理的问题，其实就是容器编排的问题，即Kubernetes要解决的问题。</p>
+<p>OpenShift集成了原生的Kubernetes作为容器编排组件。OpenShift通过Kubernetes来管理容器集群中的机器节点及容器，为业务应用提供：</p>
+<p>容器调度：按业务的要求快速部署容器至指定的目标。</p>
+<p>弹性伸缩：按业务的需要快速扩展或收缩容器的运行实例数量。</p>
+<p>异常自愈：当容器实例发生异常，集群能自动感知、处理并恢复服务状态。</p>
+<p>持久化卷：为散布在集群不同机器上的容器提供持久化卷的智能对接。</p>
+<p>服务发现：为业务微服务提供服务发现及负载均衡功能。</p>
+<p>配置管理：为业务应用提供灵活的配置管理及分发规则。</p>
+<h4>3、容器应用云</h4>
+<p>OpenShift在Docker和Kubernetes的基础上提供了各种功能，以满足业务应用，研发用户及运维用户在生产效率上的诉求。</p>
+<p>应用开发框架及中间件。OpenShift提供了丰富的开箱即用的编程开发框架及中间件，如Java、PHP、Ruby、Python、JBoss、EAP、Tomcat、MySQL、MongoDB及JBoss系列中间件等。</p>
+<p>应用及服务目录。OpenShift提供了如软件市场式的服务及应用目录，可以实现用户一键部署各类应用及服务，比如一键部署Hadoop集群和Spark集群。</p>
+<p>自动化流程及工具。OpenShift内置了自动化流程工具S2I（Source to Image），帮助用户自动化完成代码的编译、构建及镜像发布。</p>
+<p>软件自定义网络（SDN）。通过OpenVSwitch，OpenShift为用户提供了灵活强健的软件定义网络。实现跨主机共享网络及多租房隔离网络模式。</p>
+<p>性能监控及日志管理。OpenShift提供了开箱可用的性能监控及日志管理的组件。通过平台、业务能快速获取运行状态指标，对业务日志进行收集及分析。</p>
+<p>多用户接口。OpenShift提供了友好的Web用户界面、命令行工具及RESTful API。</p>
+<p>自动化集群部署及管理。OpenShift通过Ansible实现了集群的自动化部署，为集群的自动化扩容提供了接口。</p>
+<p>&nbsp;</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/03/docker%e3%80%81kubernetes%e4%b8%8eopenshift/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-03T14:55:50+08:00">六月 3, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/03/docker%e3%80%81kubernetes%e4%b8%8eopenshift/#respond"><span class="screen-reader-text">于Docker、Kubernetes与OpenShift</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-935 -->
+
+<article id="post-932" class="post-932 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/06/02/%e6%a0%b8%e5%bf%83%e6%b5%81%e7%a8%8b%e8%af%a6%e8%a7%a3/" rel="bookmark">核心流程详解</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>OpenShift容器云提供了众多苊设施和工具，承载了众多功能和特性，帮助用户通过这个平台提升企业IT的效率和敏捷度。OpenShift容器云项目中最重要的核心流程是将应用从静态的源代码变成动态的应用服务的过程。</p>
+<p>应用部署到应用上线响应用户请求的全流程如下图：</p>
+<img class="alignnone  wp-image-933" src="http://www.zengdongliang.cn/wp-content/uploads/2018/06/OpenShift核心组件及流程-300x176.png" alt="" width="668" height="392" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/06/OpenShift核心组件及流程-300x176.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/OpenShift核心组件及流程-768x450.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/06/OpenShift核心组件及流程.png 783w" sizes="(max-width: 668px) 100vw, 668px" />
+<p>这个流程涉及了多种不同类型的OpenShift对象。所有对象的信息最终都记录在etcd集群数据库中。</p>
+<p>1、应用构建</p>
+<p>第一步，部署应用。流程的开始是用户通过OpenShift的Web控制台或命令oc new-app创建应用。根据应用提供的源代码仓库地址及Builder镜像，平台将生成构建配置（Build Config）、部署配置（Deployment Config）、Service及Route等对象。</p>
+<p>第二步，触发构建。应用相关的对象创建完毕后，平台将触发一次S2I构建。</p>
+<p>第三步，实例化构建。平台依据应用的Build Config实例化一次构建，生成Build对象。Build对象生成后，平台执行具体的构建操作，包括下载源代码、实例化Builer镜像、执行编译和构建脚本等。</p>
+<p>第四步，生成镜像。构建成功后将生成一个可供部署的应用容器镜像。平台将些镜像推送到内部的镜像仓库组件Registry中。</p>
+<p>第五步，更新Image Stream。镜像推送至内部的仓库后，平台将创建或更新应用的Image Stream的镜像信息，使之指向最新的镜像。</p>
+<p>2、应用部署</p>
+<p>第六步，触发镜像部署。当Image Stream的镜像信息更新后，将触发平台部署S2I构建生成的镜像。</p>
+<p>第七步，实例化镜像部署。Deployment Conf对象记录了部署的定义，平台将依据配置实例化一次部署，生成一个Deploy对象跟踪当次的部署状态。</p>
+<p>第八步，生成Replication Controller。平台部署将实例化一个Replication Controller，用以调度应用容器的部署。</p>
+<p>第九步，部署容器。通过Replication Controller，OpenShift将Pod及应用容器部署到集群的计算节点中。</p>
+<p>3、请求处理</p>
+<p>第十步，用户访问。用户通过浏览器访问Route对象中定义的应用域名。</p>
+<p>第十一步，请求处理并返回。请求到Router组件后，Router根据Router定义的规则，找到请求所含域名相关联的Service的容器，并将请求转发给容器实例。容器实例除了请求后返回数据，还会通过Router将数据返回给调用的客户端。</p>
+<p>4、应用更新</p>
+<p>在应用更新时，平台将重复上述流程的第一步至第九步。平台将用下载更新的代码构建应用，生成新的镜像，并将镜像部署至集群中。值得注意的是，OpenShift支持滚动更新。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/06/02/%e6%a0%b8%e5%bf%83%e6%b5%81%e7%a8%8b%e8%af%a6%e8%a7%a3/" rel="bookmark"><time class="entry-date published updated" datetime="2018-06-02T21:52:34+08:00">六月 2, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/06/02/%e6%a0%b8%e5%bf%83%e6%b5%81%e7%a8%8b%e8%af%a6%e8%a7%a3/#respond"><span class="screen-reader-text">于核心流程详解</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-932 -->
+
+<article id="post-928" class="post-928 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e8%bf%9e%e9%80%9a%e6%80%a7/" rel="bookmark">网络连通性</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h4>1、集群内容器间通信</h4>
+<p>集群内容器的通信分为两种情况：一种是在同一台计算节点上的容器音相互通信；另一种是不同节点上的容器音相互通信。</p>
+<p>在同一节点上的容器之间通信是通过OVS的网桥设备br0的转换完成。</p>
+<p>当两个通信的容器在不同计算节点时，其通信的过程有点复杂，如下图</p>
+<img class="alignnone  wp-image-930" src="http://www.zengdongliang.cn/wp-content/uploads/2018/05/c_pod_two_node-1-211x300.png" alt="" width="542" height="771" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/05/c_pod_two_node-1-211x300.png 211w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/c_pod_two_node-1.png 560w" sizes="(max-width: 542px) 100vw, 542px" />
+<p>从容器Pod1的网卡eth0发出，通过vethA到达br0。OVS根据规则将请求转发给vxlan0所在的端口。通过GRE/Vxlan的封装,数据穿越宿主机所在的网络到达远程节点（Node2）的vxlan0设备。OVS根据规则将请求转发给vethA，最终请求达到容器设备的eth0。</p>
+<p>在OpenShift中，容器应用间的调用通过Service进行解耦，避免容器之间直接调用。OpenShift会给每个Service组件分配一个虚拟的IP地址。Service的地址是一个虚拟地址，其转发功能是通过iptables规则及kubeproxy实现的。创建新的Service时，Kubernetes会在集群内的所有节点上为该Service创建相应的iptables规则。这些ipables的规则会将发送至该Service地址及服务端口的流量转发至本节点的Kubeproxy进程，再由Kubeproxy转发至实际的窗口。</p>
+<h4>2、集群内容器访问集群外服务</h4>
+<p>集群内容器访问集群外的主机不存在任何障碍。集群内容器访问集群外部的主机时，请求从容器内部网络设备经过veth到OVS的网桥设备br0，数据被转发到tun0设备。数据包经过iptables的网络地址转换后，最终发送到远程主机。</p>
+<h4>3、集群外应用访问集群内容器</h4>
+<p>通过OpenVSwitch，集群内部的节点和容器的访问及容器对外部的访问并不存在障碍。但外部主机访问集群内容器和服务时，需要有更多的考量。容器和Service的IP地址是集群内部的IP地址，集群外部的主机不能正确识别这些地址。集群外部的应用访问OpenVSwitch集群内部的容器，有以下几个途径。</p>
+<p>a）、通过OpenShift的Router组件将外界的请求转发给集群内部的窗口。Router本质上是一个Haproxy程序，它监听在集群中计算节点的80和443端口。集群外的应用或用户通过容器应用的域名请求服务，域名解析到Router所在计算节点的IP地址，从而数据包通过Router监听的端口到达Router。Router根据域名找到与之相对应的Service后端的Pod，最终将请求转发给Pod容器处理。</p>
+<p>b）、通过NodePort类型的Service暴露服务。NodePort类型的Service会在集群中的所有节点上监听一个特定的端口，访问任意一个计算节点的端口，即可访问内部容器中的服务。Router目前只支持转发http及https的流量，对TCP及UDP的流量，NodePort Service是一个选择。</p>
+<p>c）、在集群外的主机上配置相应的路由规则，将集群中的一个计算节点配置成路由器，所有发送到集群内容器的流量都由该计算节点转发。</p>
+<p>d）、将客户端所在的主机加入OpenShift集群，并设置成为一个不运行容器的（Scheduling Disabled）计算节点。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e8%bf%9e%e9%80%9a%e6%80%a7/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-31T18:13:12+08:00">五月 31, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e8%bf%9e%e9%80%9a%e6%80%a7/#respond"><span class="screen-reader-text">于网络连通性</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-928 -->
+
+<article id="post-923" class="post-923 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e5%ae%9e%e7%8e%b0/" rel="bookmark">网络实现</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>1、节点主机子网</p>
+<img class="alignnone  wp-image-925" src="http://www.zengdongliang.cn/wp-content/uploads/2018/05/Network1-1-300x147.png" alt="" width="641" height="314" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/05/Network1-1-300x147.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/Network1-1-768x377.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/Network1-1.png 929w" sizes="(max-width: 641px) 100vw, 641px" />
+<p>如上图所示，每个集群节点都有一个真实网络的IP地址：192.168.172.X。在OpenShift中，每个节点默认都被分配一个10.1.x.0/24的网络子网。在计算节点之上运行的容器的IP地址将来源于此分配的网段。</p>
+<p>通过oc get hostsubnets命令可以查看各个节点分配到的子网。</p>
+<p>各节点的子网规划可以查看/etc/origin/master/master-config.yaml文件中的clusterNetworkCIDR及 hostSubnetLength属性值。</p>
+<p>2、节点设备构成</p>
+<p>在OpenShift集群中的节点上运行ip addr命令可以查看当前节点的网络设备信息</p>
+<table style="border-collapse: collapse; width: 100%;" border="1"><tbody><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">设备名称</td>
+<td style="width: 82.2727%; height: 28px;">描述</td>
+</tr><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">lo</td>
+<td style="width: 82.2727%; height: 28px;">本地的Loopback接口</td>
+</tr><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">ens192</td>
+<td style="width: 82.2727%; height: 28px;">计算节点的物理网卡，从CentOS7开始，以太网默认不再是以ethX命名，启用了和设备信息相关联的命名方式</td>
+</tr><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">br0</td>
+<td style="width: 82.2727%; height: 28px;">OpenVSwitch创建的网桥设备。所有在此计算节点上通过OpenShift创建的容器都将连接至此网桥设备</td>
+</tr><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">lbr0|docker0</td>
+<td style="width: 82.2727%; height: 28px;">Docker使用的Linux网桥设备，Docker直接创建的所有容器都将连接此网桥设备</td>
+</tr><tr style="height: 28px;"><td style="width: 17.5758%; height: 28px;">vovsbr|vlinuxbr</td>
+<td style="width: 82.2727%; height: 28px;">分别连接到OVS br0网桥设备及lbr0网桥设备的veth对设备。这对设备保证了在OpenShift之外产生的Docker容器与OpenShift集群中的容器的连通性</td>
+</tr><tr><td style="width: 17.5758%;">tun0</td>
+<td style="width: 82.2727%;">OVS网桥br0的一个内部端口（Internal Port）。容器下外界物理网卡上的主机的通信将通过此端口</td>
+</tr><tr><td style="width: 17.5758%;">vethxxxxxx</td>
+<td style="width: 82.2727%;">d在此计算节点上运行的容器的veth对设备。Docker会自动为每个桥接模式的容器建立两个veth对设备</td>
+</tr></tbody></table>
+<p>通过docker network ls命令可以看OpenShift的计算节点上，Docker创建了多少网络。</p>
+<p>通过ovs-vsctl list-ports br0命令，可以看到所有连接到OVS br0网桥上的设备信息。所有通过OpenShift集群创建的容器的veth对设备的一端都将连接到这个网桥设备上。经过这个网桥设备的流量都将受到集群定义的OVS的OpenFlow规则的控制。可能通过ovs-appctl bridge/dump-flows br0命令查看OVS数据库中的具体规则 。</p>
+<p>3、网络结构组成</p>
+<img class="alignnone  wp-image-926" src="http://www.zengdongliang.cn/wp-content/uploads/2018/05/network-arc-300x209.png" alt="" width="706" height="492" srcset="https://www.zengdongliang.cn/wp-content/uploads/2018/05/network-arc-300x209.png 300w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/network-arc-768x536.png 768w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/network-arc-1024x714.png 1024w, https://www.zengdongliang.cn/wp-content/uploads/2018/05/network-arc.png 1042w" sizes="(max-width: 706px) 100vw, 706px" />
+<p>如上图所示，所有OpenShift节点主机上都会创建一个OVS网桥br0。所有通过OpenShift启动的Pod容器都会通过veth设备对连接到OVS网桥。OVS网桥和Docker网桥通过vovsbr和vlinuxbr对设备连接，使用OpenShift创建的容器和Docker创建的窗口可以直接通信。</p>
+<p>在每个OpenShift的节点上都会安装OpenShift Node节点及Open vSwitch软件包。OpenShift Node进程负责和Master节点的API Server通信，获取集群信息。OpenShift Node进程负责通知 OVS Switchd进程集群容器和节点变更的信息。OVS Switchd进程接收到通知后，将更新OVS虚拟交换机中的流控表规则，使流量能准确地分发到对应的容器和节点。</p>
+<p>从一个计算节点的容器到其他计算节点的容器的流量都会通过Vxlan/GRE封装，然后经过主机的网卡发出，经过主机所在网络到远程计算节点的网卡，再根据OVS的规则转发至目标容器。计算节点上的容器访问集群外部网络的流量，均由tun0经过iptables规则的网络地址转换发送到远程集群外的主机。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e5%ae%9e%e7%8e%b0/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-31T17:40:26+08:00">五月 31, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/05/31/%e7%bd%91%e7%bb%9c%e5%ae%9e%e7%8e%b0/#respond"><span class="screen-reader-text">于网络实现</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-923 -->
+
+<article id="post-921" class="post-921 post type-post status-publish format-standard hentry category-openshift">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="https://www.zengdongliang.cn/2018/05/31/openshift%e5%ae%b9%e5%99%a8%e7%bd%91%e7%bb%9c/" rel="bookmark">OpenShift容器网络</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>OpenShift默认的容器网络是基于Open vSwitch（OVS）实现的。Open vSwitch可以为动态变化的端点提供二层交换服务。其支持OpenFlow交换机流表管理协议，因此用户通过OpenFlow的规则，可以灵活定义数据包的转换规则。</p>
+<p>Open vSwitch提供了灵活丰富的功能特性为OpenShift实例容器的虚拟网络和多租房的网络隔离。基于Open vSwitch，OpenShift提供了两种网络方案：ovs-subnet和ovs-multitenant。</p>
+<p>1、ovs-subnet：子网模式。为集群中的容器提供一个扁平的二层虚拟网络。所有在这个扁平二层网络中的容器均可以直接连通。</p>
+<p>2、ovs-multitenant：多租房模式。OpenShift将以Project为单位提供容器网络的隔离。在同一个项目（Project）内的所有容器可以直接通信。不同项目的容器默认不能直接通信。按业务需要，用户可以连通一个或多个项目的隔离网络，或将某个项目设置成全局可访问。</p>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">发布于 </span><a href="https://www.zengdongliang.cn/2018/05/31/openshift%e5%ae%b9%e5%99%a8%e7%bd%91%e7%bb%9c/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-31T15:21:34+08:00">五月 31, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">分类 </span><a href="https://www.zengdongliang.cn/category/%e4%ba%91%e5%b9%b3%e5%8f%b0/openshift/" rel="category tag">OpenShift</a></span><span class="comments-link"><a href="https://www.zengdongliang.cn/2018/05/31/openshift%e5%ae%b9%e5%99%a8%e7%bd%91%e7%bb%9c/#respond"><span class="screen-reader-text">于OpenShift容器网络</span>留下评论</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-921 -->
+
+	<nav class="navigation pagination" role="navigation">
+		<h2 class="screen-reader-text">文章导航</h2>
+		<div class="nav-links"><span aria-current='page' class='page-numbers current'><span class="meta-nav screen-reader-text">页 </span>1</span>
+<a class='page-numbers' href='https://www.zengdongliang.cn/category/%E4%BA%91%E5%B9%B3%E5%8F%B0/openshift/page/2/'><span class="meta-nav screen-reader-text">页 </span>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='https://www.zengdongliang.cn/category/%E4%BA%91%E5%B9%B3%E5%8F%B0/openshift/page/4/'><span class="meta-nav screen-reader-text">页 </span>4</a>
+<a class="next page-numbers" href="https://www.zengdongliang.cn/category/%E4%BA%91%E5%B9%B3%E5%8F%B0/openshift/page/2/">下一页</a></div>
+	</nav>
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a class="privacy-policy-link" href="https://www.zengdongliang.cn/sample-page/">Sample Page</a><span role="separator" aria-hidden="true"></span>			<a href="https://cn.wordpress.org/" class="imprint">
+				自豪地采用WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+        <script>
+            jQuery(document).ready(function( $ ) {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-content/plugins/table-of-contents-plus/front.min.js?ver=1509'></script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141010'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">\u5c55\u5f00\u5b50\u83dc\u5355<\/span>","collapse":"<span class=\"screen-reader-text\">\u6298\u53e0\u5b50\u83dc\u5355<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-content/themes/twentyfifteen/js/functions.js?ver=20150330'></script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-includes/js/clipboard.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.zengdongliang.cn/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+ <script id="module-flowchart"> (function($) { $(function() { if (typeof $.fn.flowChart !== "undefined") { if ($(".language-flow").length > 0) { $(".language-flow").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-flow").addClass("flowchart").removeClass("language-flow"); $(".flowchart").flowChart(); } } }); })(jQuery); </script>  <script id="module-katex"> (function($) { $(function() { if (typeof katex !== "undefined") { if ($(".language-katex").length > 0) { $(".language-katex").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-katex").addClass("katex-container").removeClass("language-katex"); $(".katex-container").each(function() { var katexText = $(this).text(); var el = $(this).get(0); if ($(this).parent("code").length == 0) { try { katex.render(katexText, el) } catch (err) { $(this).html("<span class='err'>" + err) } } }); } } }); })(jQuery); </script>  <script id="module-sequence-diagram"> (function($) { $(function() { if (typeof $.fn.sequenceDiagram !== "undefined") { $(".language-sequence").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-seq").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-sequence").addClass("sequence-diagram").removeClass("language-sequence"); $(".language-seq").addClass("sequence-diagram").removeClass("language-seq"); $(".sequence-diagram").sequenceDiagram({ theme: "simple" }); } }); })(jQuery); </script>  <script id="module-mermaid"> (function($) { $(function() { if (typeof mermaid !== "undefined") { if ($(".language-mermaid").length > 0) { $(".language-mermaid").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-mermaid").addClass("mermaid").removeClass("language-mermaid"); mermaid.init(); } } }); })(jQuery); </script>  <script id="module-clipboard"> (function($) { $(function() { var pre = document.getElementsByTagName("pre"); var pasteContent = document.getElementById("paste-content"); var hasLanguage = false; for (var i = 0; i < pre.length; i++) { var codeClass = pre[i].children[0].className; var isLanguage = codeClass.indexOf("language-"); var excludedCodeClassNames = [ "language-katex", "language-seq", "language-sequence", "language-flow", "language-flowchart", "language-mermaid", ]; var isExcluded = excludedCodeClassNames.indexOf(codeClass); if (isExcluded !== -1) { isLanguage = -1; } if (isLanguage !== -1) { var button = document.createElement("button"); button.className = "copy-button"; button.textContent = "Copy"; pre[i].appendChild(button); hasLanguage = true; } }; if (hasLanguage) { var copyCode = new ClipboardJS(".copy-button", { target: function(trigger) { return trigger.previousElementSibling; } }); copyCode.on("success", function(event) { event.clearSelection(); event.trigger.textContent = "Copied"; window.setTimeout(function() { event.trigger.textContent = "Copy"; }, 2000); }); } }); })(jQuery); </script> 
+</body>
+</html>
